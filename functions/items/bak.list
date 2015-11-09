@@ -1,0 +1,89 @@
+#!/bin/bash
+
+function item.list {
+
+ if [[ $item_buy == "bandaid" ]]; then
+  if [[ $item_purchase = 1 ]]; then
+   player_item_bandaid=$[ $player_item_bandaid + $itemnum ]
+   item_purchase=0
+  fi
+
+ elif [[ $item_buy == "arrow" ]]; then
+  if [[ $item_purchase = 1 ]]; then
+   player_item_arrow=$[ $player_item_arrow + $itemnum ]
+   item_purchase=0
+  fi 
+
+ elif [[ $item_buy == "reagent" ]]; then
+  if [[ $item_purchase = 1 ]]; then
+   player_item_reagent=$[ $player_item_reagent + $itemnum ]
+   item_purchase=0
+  fi
+
+ elif [[ $item_buy == "weapon_repair" ]]; then
+  if [[ $item_purchase = 1 ]]; then
+   player_item_weapon_repair=$[ $player_item_weapon_repair + $itemnum ]
+   item_purchase=0
+  fi
+
+ elif [[ $item_buy == "armor_repair" ]]; then 
+  if [[ $item_purchase = 1 ]]; then
+   player_item_armor_repair=$[ $player_item_armor_repair + $itemnum ]
+   item_purchase=0
+  fi
+
+ elif [[ $item_buy == "leather" ]]; then 
+  if [[ $item_purchase = 1 ]]; then
+   player_item_armor_leather=$[ $player_item_armor_leather + $itemnum ]
+   item_purchase=0
+  fi
+
+ elif [[ $item_buy == "dullcopper" ]]; then
+  if [[ $item_purchase = 1 ]]; then
+   player_item_armor_dullcopper=$[ $player_item_armor_dullcopper + $itemnum ]
+   item_purchase=0
+  fi
+
+ elif [[ $item_buy == "shadowiron" ]]; then
+  if [[ $item_purchase = 1 ]]; then
+   player_item_armor_shadowiron=$[ $player_item_armor_shadowiron + $itemnum ]
+   item_purchase=0
+
+ elif [[ $item_buy == "copper" ]]; then
+  if [[ $item_purchase = 1 ]]; then
+   player_item_armor_copper=$[ $player_item_armor_copper + $itemnum ]
+   item_purchase=0
+  fi
+
+ elif [[ $item_buy == "bronze" ]]; then
+  if [[ $item_purchase = 1 ]]; then
+   player_item_armor_bronze=$[ $player_item_armor_bronze + $itemnum ]
+   item_purchase=0
+  fi
+
+ elif [[ $item_buy == "gold" ]]; then
+  if [[ $item_purchase = 1 ]]; then
+   player_item_armor_gold=$[ $player_item_armor_gold + $itemnum ]
+   item_purchase=0
+  fi
+
+ elif [[ $item_buy == "agapite" ]]; then
+  if [[ $item_purchase = 1 ]]; then
+   player_item_armor_agapite=$[ $player_item_armor_agapite + $itemnum ]
+   item_purchase=0
+  fi
+
+ elif [[ $item_buy == "verite" ]]; then
+  if [[ $item_purchase = 1 ]]; then
+   player_item_armor_verite=$[ $player_item_armor_verite + $itemnum ]
+   item_purchase=0
+  fi
+
+ elif [[ $item_buy == "valorite" ]]; then
+  if [[ $item_purchase = 1 ]]; then
+   player_item_armor_valorite=$[ $player_item_armor_valorite + $itemnum ]
+   item_purchase=0
+  fi
+ fi
+ fi
+}

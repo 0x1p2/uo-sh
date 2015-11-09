@@ -1,0 +1,115 @@
+Classes / Skills:
+ * Archer
+ * Mage
+ * Fencer
+ * Swordsman
+ * Mace Fighter
+   Wrestling
+   Spirit Speak
+ * Meditation
+ * Healing (Bandaid)
+   Necromancy
+   Paladin
+ * Focus (Stamina Regeneration)
+ * Anatomy
+ * Tactics
+ * Evaluating Intelligence
+   Poisoning
+
+Stats:
+ * Strength
+ * Intelligence
+ * Dexterity
+   Luck
+   
+
+Class Specials:
+ Fencer:		Swordsman:		Mace Fighting:		Archery:		Magery:
+ * Apply Poison		* Sacred Weapon		* Heavy Blow		* Second Shot		* Greater Heal
+ * Hit Lower Defense	* Counter Stance	* Parry Stance		* Barbed Arrow		* Blessed Armor
+ * Parry / Counter	* Heavy Blow		* Defensive Stance	* Pinpoint		* Fire Ball
+   Disarm		  2-Handed Stance	  Crippling Blow	* Quiver Release	* Explosion
+ * Quick-Hits		  Stun			  Stun			* Explosion Arrow	* Teleport 
+   Coup de Grace	  Coup de Grace		  Shield Bash		* Feeble		  Lightning (stun)
+ * Battle Dressing	* Thrust					* Retreat		  Polymorph
+ * Lunge
+
+Ideas:
+ [*]  Create distance between ranged characters and monsters.
+ [*]  Increase of stamina based off of total of stats.
+ [*]  Increase stamina regeneration.
+ [*]  Add bandaid skill to assist applying bandaids.
+ [ ]  Include luck stat into game.
+ [*]  Review the core script and rewrite to better understanding 
+        and computing. Try to cut lines that are unneeded and
+        discover and any issues.
+ [*]  Review and change variables to better suit their needs.
+ [*]  Give more purpose to Intelligence to other classes.
+ [*]  Players attack and defense based off of weapons and armor and 
+        not a pre-determined value.
+ [*]  Players utilizing different weapons (changing skills.)
+        See weapons below.
+ [ ]  Create new zones for higher level monsters.
+ [*]  Monsters attack changed based off of the weapons it uses and
+        the amount of Strength, Dex, and Intelligence.
+ [*]  Monsters able to use skills/spells much like the player at 
+      random.
+ [ ]  Implement "professions" which will be advanced skills that
+        affect the players attack. See above for list.
+ [*]  Add alignment to affect the skills of Necromancy and Paladin.
+ [ ]  Poison levels for characters that have poison moves. 
+ [ ]  Implement skills such as Meditation and Focus to increase
+        regeneration of stamina.
+ [ ]  Add PvP with other characters that are not currently playing
+        the game but have a save files.
+ [ ]  Add shields to the game to increase defense of Swordsman
+        and the Mace Fighter.
+ [*]  Provisions rework.   
+ [ ]  Accuracy and hit/miss players.
+ [ ]  HP Regeneration (1 HP) every 2 rounds.
+ [*]  Item Enhancements (IN PROGRESS, LEFT ON FENCER.SH ADDING THE
+        STATS TO FORUMULAS)
+ [*]  Evaluating Intelligence and Tactics to damange bonus.
+ [ ]  Separate armor into peices versus being entire suits.
+
+
+ Alignment:
+  Good Karma
+  Negative Karma
+
+ Titles:
+  +10  Glorious Lord / Lady
+  + 8  Lord
+  + 6  Exalted
+  + 4  Honored
+  + 2  Famed
+       -----
+  - 2  Rude
+  - 4  Hated
+  - 6  Infamous
+  - 8  Lord
+  -10  Dread Lord / Lady
+ 
+ Weapons:
+  * Bow		Archery
+  * Broadsword	Swordsman
+  * Claymore	Swordsman
+  * Club	Mace Fighting
+  * Crossbow	Archery
+  * Flail	Mace Fighting
+  * Glave	Swordsman
+  * Kryss	Fencing
+  * Longbow	Archery
+  * Longsword	Swordsman
+  * Mac		Mace Fighting
+  * Maul	Mace Fighting
+  * Morningstar	Mace Fighting
+  * Rapier	Fencing
+  * Scythe	*
+  * Sickle	*
+  * Spear	Swordsman
+  * Staff	Magery
+  * Wand	Magery
+  * Warfork	Fencing
+  * Whip	*
+  

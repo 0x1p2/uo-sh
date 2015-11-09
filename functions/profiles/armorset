@@ -1,0 +1,28 @@
+
+
+function set.current.armor {
+player_armor_head=
+player_armor_neck=
+player_armor_torso=
+player_armor_gloves=
+player_armor_leggings=
+
+item_armor_head_type=
+item_armor_neck_type=
+item_armor_torso_type=
+item_armor_gloves_type=
+item_armor_leggings_type=
+
+source items/armor//.sh
+source items/armor//.sh
+source items/armor//.sh
+source items/armor//.sh
+source items/armor//.sh
+
+
+
+
+
+
+}
+

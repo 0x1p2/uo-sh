@@ -1,0 +1,97 @@
+player_item_gold=0
+player_item_bandaid=0
+player_item_arrow=0
+player_item_reagent=0
+
+ #Fencing
+player_item_own_dagger=0
+player_item_own_kryss=0
+player_item_own_rapier=0
+player_item_own_warfork=0
+ #Swordsman
+player_item_own_longsword=0
+player_item_own_broadsword=0
+player_item_own_claymore=0
+player_item_own_spear=0
+player_item_own_glave=0
+ #MaceFighter
+player_item_own_club=0
+player_item_own_mace=0
+player_item_own_morningstar=0
+player_item_own_maul=0
+player_item_own_flail=0
+ #Archer
+player_item_own_bow=0
+player_item_own_longbow=0
+player_item_own_compositebow=0
+player_item_own_repeatingcrossbow=0
+#Mage
+player_item_own_spellbook=0
+player_item_own_wand=0
+player_item_own_staff=0
+player_item_own_spelltome=0
+ #Armor
+player_item_own_leather=0
+player_item_own_dullcopper=0
+player_item_own_shadowiron=0
+player_item_own_copper=0
+player_item_own_bronze=0
+player_item_own_gold=0
+player_item_own_agapite=0
+player_item_own_verite=0
+player_item_own_valorite=0
+ #Leather
+player_item_own_head_leather=0
+player_item_own_neck_leather=0
+player_item_own_torso_leather=0
+player_item_own_gloves_leather=0
+player_item_own_leggings_leather=0
+ #Dull Copper
+player_item_own_head_dullcopper=0
+player_item_own_neck_dullcopper=0
+player_item_own_torso_dullcopper=0
+player_item_own_gloves_dullcopper=0
+player_item_own_leggings_dullcopper=0
+ #Shadow Iron
+player_item_own_head_shadowiron=0
+player_item_own_neck_shadowiron=0
+player_item_own_torso_shadowiron=0
+player_item_own_gloves_shadowiron=0
+player_item_own_leggings_shadowiron=0
+ #Copper
+player_item_own_head_copper=0
+player_item_own_neck_copper=0
+player_item_own_torso_copper=0
+player_item_own_gloves_copper=0
+player_item_own_leggings_copper=0
+ #Bronze
+player_item_own_head_bronze=0
+player_item_own_neck_bronze=0
+player_item_own_torso_bronze=0
+player_item_own_gloves_bronze=0
+player_item_own_leggings_bronze=0
+ #Gold
+player_item_own_head_gold=0
+player_item_own_neck_gold=0
+player_item_own_torso_gold=0
+player_item_own_gloves_gold=0
+player_item_own_leggings_gold=0
+ #Agapite
+player_item_own_head_agapite=0
+player_item_own_neck_agapite=0
+player_item_own_torso_agapite=0
+player_item_own_gloves_agapite=0
+player_item_own_leggings_agapite=0
+ #Verite
+player_item_own_head_verite=0
+player_item_own_neck_verite=0
+player_item_own_torso_verite=0
+player_item_own_gloves_verite=0
+player_item_own_leggings_verite=0
+ #Valorite
+player_item_own_head_valorite=0
+player_item_own_neck_valorite=0
+player_item_own_torso_valorite=0
+player_item_own_gloves_valorite=0
+player_item_own_leggings_valorite=0
+

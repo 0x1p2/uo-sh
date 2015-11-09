@@ -1,0 +1,518 @@
+#!/bin/bash
+
+function saveprofile {
+
+player.statmod
+
+ clear
+ echo " "
+ echo -e " [\033[1;36m+\033[m]  Saving profille..."
+ if [[ -d profiles/"${player_name}"/ ]]; then
+   echo -en "\n"
+ else
+   mkdir profiles/"${player_name}"
+ fi
+ echo -en "# Character Profile: $player_name:$storedpass
+player_new=1
+source classes/$player_source
+player_source=$player_source
+
+player_name=$player_name
+player_class=$player_class
+
+player_hp=$player_hp
+player_hp_cap=$player_hp_cap
+player_hp_modifier_increase=$player_hp_modifier_increase
+player_attack=$player_attack
+player_defense=$player_defense
+player_attack_range=$player_attack_range
+player_defense_range=$player_defense_range
+player_defense_buff=0
+player_speed=$player_speed
+player_fame=$player_fame
+player_killcount=$player_killcount
+player_deaths=$player_deaths
+
+player_item_weapon=$player_item_weapon
+player_item_weapon_name=\"$player_item_weapon_name\"
+player_item_weapon_class=$item_weapon_class
+player_item_weapon_durability=$player_item_weapon_durability
+player_item_weapon_durability_cap=$player_item_weapon_durability_cap
+#player_item_armor=$player_item_armor
+#player_item_armor_name=\"$player_item_armor_name\"
+#player_item_armor_durability=$player_item_armor_durability
+#player_item_armor_durability_cap=$player_item_armor_durability_cap
+
+player_item_armor_repair=0
+player_item_armor_upgrade=0
+player_item_weapon_repair=0
+player_item_weapon_upgrade=0
+
+item_enhance=$item_enhance
+item_enhance_stamina=$item_enhance_stamina
+item_enhance_stamina_cap=$item_enhance_stamina_cap
+item_enhance_stamina_regeneration=$item_enhance_stamina_regeneration
+item_enhance_defense=$item_enhance_defense
+item_enhance_defense_range=$item_enhance_defense_range
+item_enhance_attack=$item_enhance_attack
+item_enhance_attack_range=$item_enhance_attack_range
+item_enhance_speed=$item_enhance_speed
+item_enhance_primary_skill=$item_enhance_primary_skill
+item_enhance_strength=$item_enhance_strength
+item_enhance_intelligence=$item_enhance_intelligence
+item_enhance_dexterity=$item_enhance_dexterity
+player_item_enhancement=$player_item_enhancement
+
+autospeed=$autospeed
+britannia_discovered=$britannia_discovered
+felucca_discovered=$felucca_discovered
+despise_discovered=$despise_discovered
+despise_discovered3=$despise_discovered3
+despise_discovered4=$despise_discovered4
+
+" > profiles/"${player_name}"/configs
+
+ echo -en "# USER SKILLS AND STATS
+player_skill_primary_name=$player_skill_primary_name
+player_skill_primary=$player_skill_primary
+player_skill_archery=$player_skill_archery
+player_skill_magery=$player_skill_magery
+player_skill_fencing=$player_skill_fencing
+player_skill_swordsman=$player_skill_swordsman
+player_skill_macefighting=$player_skill_macefighting
+player_skill_healing=$player_skill_healing
+player_skill_tactics=$player_skill_tactics
+player_skill_evalint=$player_skill_evalint
+player_skill_focus=$player_skill_focus
+player_skill_meditation=$player_skill_meditation
+player_skill_anatomy=$player_skill_anatomy
+
+player_skill_archery_status=$player_skill_archery_status
+player_skill_magery_status=$player_skill_magery_status
+player_skill_fencing_status=$player_skill_fencing_status
+player_skill_swordsman_status=$player_skill_swordsman_status
+player_skill_macefighting_status=$player_skill_macefighting_status
+player_skill_healing_status=$player_skill_healing_status
+player_skill_tactics_status=$player_skill_tactics_status
+player_skill_evalint_status=$player_skill_evalint_status
+player_skill_focus_status=$player_skill_focus_status
+player_skill_meditation_status=$player_skill_meditation_status
+player_skill_anatomy_status=$player_skill_anatomy_status
+
+player_intelligence=$player_intelligence
+player_strength=$player_strength
+player_dexterity=$player_dexterity
+player_stamina=$player_stamina
+player_stamina_cap=$player_stamina_cap
+player_stamina_regeneration=$player_stamina_regeneration
+
+player_intelligence_status=$player_intelligence_status
+player_strength_status=$player_strength_status
+player_dexterity_status=$player_dexterity_status
+
+#player_stat_primary=$player_stat_primary
+#player_stat_secondary=$player_stat_secondary
+#player_stat_triliminary=$player_stat_triliminary
+
+player_stat_primary_status=$player_stat_primary_status
+player_stat_secondary_status=$player_stat_secondary_status
+player_stat_triliminary_status=$player_stat_triliminary_status
+
+" > profiles/"${player_name}"/skills
+
+ echo -en "# USER Weapons
+player_item_gold=$player_item_gold
+player_item_bandaid=$player_item_bandaid
+player_item_arrow=$player_item_arrow
+player_item_reagent=$player_item_reagent
+player_item_armor_head=$player_item_armor_head
+player_item_armor_neck=$player_item_armor_neck
+player_item_armor_arms=$player_item_armor_arms
+player_item_armor_torso=$player_item_armor_torso
+player_item_armor_gloves=$player_item_armor_gloves
+player_item_armor_leggings=$player_item_armor_leggings
+item_armor_head=$item_armor_head
+item_armor_arms=$item_armor_arms
+item_armor_gloves=$item_armor_gloves
+item_armor_neck=$item_armor_neck
+item_armor_torso=$item_armor_torso
+item_armor_leggings=$item_armor_leggings
+player_armor_head=$player_armor_head
+player_armor_neck=$player_armor_neck
+player_armor_torso=$player_armor_torso
+player_armor_gloves=$player_armor_gloves
+player_armor_leggings=$player_armor_leggings
+$item_armor_set
+
+ #Fencing
+player_item_own_dagger=$player_item_own_dagger
+player_item_own_kryss=$player_item_own_kryss
+player_item_own_rapier=$player_item_own_rapier
+player_item_own_warfork=$player_item_own_warfork
+ #Swordsman
+player_item_own_longsword=$player_item_own_longsword
+player_item_own_broadsword=$player_item_own_broadsword
+player_item_own_claymore=$player_item_own_claymore
+player_item_own_spear=$player_item_own_spear
+player_item_own_glave=$player_item_own_glave
+ #MaceFighter
+player_item_own_club=$player_item_own_club
+player_item_own_mace=$player_item_own_mace
+player_item_own_morningstar=$player_item_own_morningstar
+player_item_own_maul=$player_item_own_maul
+player_item_own_flail=$player_item_own_flail
+ #Archer
+player_item_own_bow=$player_item_own_bow
+player_item_own_longbow=$player_item_own_longbow
+player_item_own_compositebow=$player_item_own_compositebow
+player_item_own_repeatingcrossbow=$player_item_own_repeatingcrossbow
+#Mage
+player_item_own_spellbook=$player_item_own_spellbook
+player_item_own_wand=$player_item_own_wand
+player_item_own_staff=$player_item_own_staff
+player_item_own_spelltome=$player_item_own_spelltome
+ #Leather
+player_item_own_head_leather=$player_item_own_head_leather
+player_item_own_neck_leather=$player_item_own_neck_leather
+player_item_own_torso_leather=$player_item_own_torso_leather
+player_item_own_arms_leather=$player_item_own_arms_leather
+player_item_own_gloves_leather=$player_item_own_gloves_leather
+player_item_own_leggings_leather=$player_item_own_leggings_leather
+ #Dull Copper
+player_item_own_head_dullcopper=$player_item_own_head_dullcopper
+player_item_own_neck_dullcopper=$player_item_own_neck_dullcopper
+player_item_own_torso_dullcopper=$player_item_own_torso_dullcopper
+player_item_own_arms_dullcopper=$player_item_own_arms_dullcopper
+player_item_own_gloves_dullcopper=$player_item_own_gloves_dullcopper
+player_item_own_leggings_dullcopper=$player_item_own_leggings_dullcopper
+ #Shadow Iron
+player_item_own_head_shadowiron=$player_item_own_head_shadowiron
+player_item_own_neck_shadowiron=$player_item_own_neck_shadowiron
+player_item_own_torso_shadowiron=$player_item_own_torso_shadowiron
+player_item_own_arms_shadowiron=$player_item_own_arms_shadowiron
+player_item_own_gloves_shadowiron=$player_item_own_gloves_shadowiron
+player_item_own_leggings_shadowiron=$player_item_own_leggings_shadowiron
+ #Copper
+player_item_own_head_copper=$player_item_own_head_copper
+player_item_own_neck_copper=$player_item_own_neck_copper
+player_item_own_torso_copper=$player_item_own_torso_copper
+player_item_own_arms_copper=$player_item_own_arms_copper
+player_item_own_gloves_copper=$player_item_own_gloves_copper
+player_item_own_leggings_copper=$player_item_own_leggings_copper
+ #Bronze
+player_item_own_head_bronze=$player_item_own_head_bronze
+player_item_own_neck_bronze=$player_item_own_neck_bronze
+player_item_own_torso_bronze=$player_item_own_torso_bronze
+player_item_own_arms_bronze=$player_item_own_arms_bronze
+player_item_own_gloves_bronze=$player_item_own_gloves_bronze
+player_item_own_leggings_bronze=$player_item_own_leggings_bronze
+ #Gold
+player_item_own_head_gold=$player_item_own_head_gold
+player_item_own_neck_gold=$player_item_own_neck_gold
+player_item_own_torso_gold=$player_item_own_torso_gold
+player_item_own_arms_gold=$player_item_own_arms_gold
+player_item_own_gloves_gold=$player_item_own_gloves_gold
+player_item_own_leggings_gold=$player_item_own_leggings_gold
+ #Agapite
+player_item_own_head_agapite=$player_item_own_head_agapite
+player_item_own_neck_agapite=$player_item_own_neck_agapite
+player_item_own_torso_agapite=$player_item_own_torso_agapite
+player_item_own_arms_agapite=$player_item_own_arms_agapite
+player_item_own_gloves_agapite=$player_item_own_gloves_agapite
+player_item_own_leggings_agapite=$player_item_own_leggings_agapite
+ #Verite
+player_item_own_head_verite=$player_item_own_head_verite
+player_item_own_neck_verite=$player_item_own_neck_verite
+player_item_own_torso_verite=$player_item_own_torso_verite
+player_item_own_arms_verite=$player_item_own_arms_verite
+player_item_own_gloves_verite=$player_item_own_gloves_verite
+player_item_own_leggings_verite=$player_item_own_leggings_verite
+ #Valorite
+player_item_own_head_valorite=$player_item_own_head_valorite
+player_item_own_neck_valorite=$player_item_own_neck_valorite
+player_item_own_torso_valorite=$player_item_own_torso_valorite
+player_item_own_arms_valorite=$player_item_own_arms_valorite
+player_item_own_gloves_valorite=$player_item_own_gloves_valorite
+player_item_own_leggings_valorite=$player_item_own_leggings_valorite
+
+" > profiles/"${player_name}"/items
+
+ echo -en "charlookupname=$player_name
+charlookupint=$player_intelligence
+charlookupstr=$player_strength
+charlookupdex=$player_dexterity
+charlookupwep='$player_item_weapon'
+charlookuphp=$player_hp
+charlookuphardhp=$player_hp_cap
+charlookupplayer_hp_modifier=$player_hp_modifier
+charlookupdeath=$player_deaths
+lookup_player_killcount=$player_killcount
+charlookupclass=$player_class
+charlookuphit=$player_attack
+charlookuphitmod=$player_attack_modifier
+charlookupdef=$player_defense
+charlookupdefmod=$player_defense_modifier
+charlookupstamstat=$player_stamina_cap
+charlookupstam=$player_stamina
+
+" > profiles/"${player_name}"/lookup
+
+ echo -e " [\033[1;36m+\033[m]  Character saving complete."
+ pause
+}
+
+function saveprofile_quiet {
+
+player.statmod
+
+ if [[ -d profiles/"${player_name}"/ ]]; then
+   echo -en "\n"
+ else
+   mkdir profiles/"${player_name}"
+ fi
+ echo -en "# Character Profile: $player_name:$storedpass
+player_new=1
+source classes/$player_source
+player_source=$player_source
+
+player_name=$player_name
+player_class=$player_class
+
+player_hp=$player_hp
+player_hp_cap=$player_hp_cap
+player_hp_modifier_increase=$player_hp_modifier_increase
+player_attack=$player_attack
+player_defense=$player_defense
+player_attack_range=$player_attack_range
+player_defense_range=$player_defense_range
+player_defense_buff=0
+player_speed=$player_speed
+player_fame=$player_fame
+player_killcount=$player_killcount
+player_deaths=$player_deaths
+
+player_item_weapon=$player_item_weapon
+player_item_weapon_name=\"$player_item_weapon_name\"
+player_item_weapon_class=$item_weapon_class
+player_item_weapon_durability=$player_item_weapon_durability
+player_item_weapon_durability_cap=$player_item_weapon_durability_cap
+player_item_armor_durability=$player_item_armor_durability
+player_item_armor_durability_cap=$player_item_armor_durability_cap
+
+player_item_armor_repair=0
+player_item_armor_upgrade=0
+player_item_weapon_repair=0
+player_item_weapon_upgrade=0
+
+item_enhance=$item_enhance
+item_enhance_stamina=$item_enhance_stamina
+item_enhance_stamina_cap=$item_enhance_stamina_cap
+item_enhance_stamina_regeneration=$item_enhance_stamina_regeneration
+item_enhance_defense=$item_enhance_defense
+item_enhance_defense_range=$item_enhance_defense_range
+item_enhance_attack=$item_enhance_attack
+item_enhance_attack_range=$item_enhance_attack_range
+item_enhance_speed=$item_enhance_speed
+item_enhance_primary_skill=$item_enhance_primary_skill
+item_enhance_strength=$item_enhance_strength
+item_enhance_intelligence=$item_enhance_intelligence
+item_enhance_dexterity=$item_enhance_dexterity
+player_item_enhancement=$player_item_enhancement
+
+autospeed=$autospeed
+britannia_discovered=$britannia_discovered
+felucca_discovered=$felucca_discovered
+despise_discovered=$despise_discovered
+despise_discovered3=$despise_discovered3
+despise_discovered4=$despise_discovered4
+
+" > profiles/"${player_name}"/configs
+
+ echo -en "# USER SKILLS AND STATS
+player_skill_primary_name=$player_skill_primary_name
+player_skill_primary=$player_skill_primary
+player_skill_archery=$player_skill_archery
+player_skill_magery=$player_skill_magery
+player_skill_fencing=$player_skill_fencing
+player_skill_swordsman=$player_skill_swordsman
+player_skill_macefighting=$player_skill_macefighting
+player_skill_healing=$player_skill_healing
+player_skill_tactics=$player_skill_tactics
+player_skill_evalint=$player_skill_evalint
+player_skill_focus=$player_skill_focus
+player_skill_meditation=$player_skill_meditation
+player_skill_anatomy=$player_skill_anatomy
+
+player_skill_archery_status=$player_skill_archery_status
+player_skill_magery_status=$player_skill_magery_status
+player_skill_fencing_status=$player_skill_fencing_status
+player_skill_swordsman_status=$player_skill_swordsman_status
+player_skill_macefighting_status=$player_skill_macefighting_status
+player_skill_healing_status=$player_skill_healing_status
+player_skill_tactics_status=$player_skill_tactics_status
+player_skill_evalint_status=$player_skill_evalint_status
+player_skill_focus_status=$player_skill_focus_status
+player_skill_meditation_status=$player_skill_meditation_status
+player_skill_anatomy_status=$player_skill_anatomy_status
+
+player_intelligence=$player_intelligence
+player_strength=$player_strength
+player_dexterity=$player_dexterity
+player_stamina=$player_stamina
+player_stamina_cap=$player_stamina_cap
+player_stamina_regeneration=$player_stamina_regeneration
+
+player_intelligence_status=$player_intelligence_status
+player_strength_status=$player_strength_status
+player_dexterity_status=$player_dexterity_status
+
+#player_stat_primary=$player_stat_primary
+#player_stat_secondary=$player_stat_secondary
+#player_stat_triliminary=$player_stat_triliminary
+
+player_stat_primary_status=$player_stat_primary_status
+player_stat_secondary_status=$player_stat_secondary_status
+player_stat_triliminary_status=$player_stat_triliminary_status
+
+" > profiles/"${player_name}"/skills
+
+ echo -en "# USER Weapons
+player_item_gold=$player_item_gold
+player_item_bandaid=$player_item_bandaid
+player_item_arrow=$player_item_arrow
+player_item_reagent=$player_item_reagent
+player_item_armor_head=$player_item_armor_head
+player_item_armor_neck=$player_item_armor_neck
+player_item_armor_arms=$player_item_armor_arms
+player_item_armor_torso=$player_item_armor_torso
+player_item_armor_gloves=$player_item_armor_gloves
+player_item_armor_leggings=$player_item_armor_leggings
+item_armor_head=$item_armor_head
+item_armor_arms=$item_armor_arms
+item_armor_gloves=$item_armor_gloves
+item_armor_neck=$item_armor_neck
+item_armor_torso=$item_armor_torso
+item_armor_leggings=$item_armor_leggings
+player_armor_head=$player_armor_head
+player_armor_neck=$player_armor_neck
+player_armor_torso=$player_armor_torso
+player_armor_gloves=$player_armor_gloves
+player_armor_leggings=$player_armor_leggings
+$item_armor_set
+
+ #Fencing
+player_item_own_dagger=$player_item_own_dagger
+player_item_own_kryss=$player_item_own_kryss
+player_item_own_rapier=$player_item_own_rapier
+player_item_own_warfork=$player_item_own_warfork
+ #Swordsman
+player_item_own_longsword=$player_item_own_longsword
+player_item_own_broadsword=$player_item_own_broadsword
+player_item_own_claymore=$player_item_own_claymore
+player_item_own_spear=$player_item_own_spear
+player_item_own_glave=$player_item_own_glave
+ #MaceFighter
+player_item_own_club=$player_item_own_club
+player_item_own_mace=$player_item_own_mace
+player_item_own_morningstar=$player_item_own_morningstar
+player_item_own_maul=$player_item_own_maul
+player_item_own_flail=$player_item_own_flail
+ #Archer
+player_item_own_bow=$player_item_own_bow
+player_item_own_longbow=$player_item_own_longbow
+player_item_own_compositebow=$player_item_own_compositebow
+player_item_own_repeatingcrossbow=$player_item_own_repeatingcrossbow
+#Mage
+player_item_own_spellbook=$player_item_own_spellbook
+player_item_own_wand=$player_item_own_wand
+player_item_own_staff=$player_item_own_staff
+player_item_own_spelltome=$player_item_own_spelltome
+ #Leather
+player_item_own_head_leather=$player_item_own_head_leather
+player_item_own_neck_leather=$player_item_own_neck_leather
+player_item_own_torso_leather=$player_item_own_torso_leather
+player_item_own_arms_leather=$player_item_own_arms_leather
+player_item_own_gloves_leather=$player_item_own_gloves_leather
+player_item_own_leggings_leather=$player_item_own_leggings_leather
+ #Dull Copper
+player_item_own_head_dullcopper=$player_item_own_head_dullcopper
+player_item_own_neck_dullcopper=$player_item_own_neck_dullcopper
+player_item_own_torso_dullcopper=$player_item_own_torso_dullcopper
+player_item_own_arms_dullcopper=$player_item_own_arms_dullcopper
+player_item_own_gloves_dullcopper=$player_item_own_gloves_dullcopper
+player_item_own_leggings_dullcopper=$player_item_own_leggings_dullcopper
+ #Shadow Iron
+player_item_own_head_shadowiron=$player_item_own_head_shadowiron
+player_item_own_neck_shadowiron=$player_item_own_neck_shadowiron
+player_item_own_torso_shadowiron=$player_item_own_torso_shadowiron
+player_item_own_arms_shadowiron=$player_item_own_arms_shadowiron
+player_item_own_gloves_shadowiron=$player_item_own_gloves_shadowiron
+player_item_own_leggings_shadowiron=$player_item_own_leggings_shadowiron
+ #Copper
+player_item_own_head_copper=$player_item_own_head_copper
+player_item_own_neck_copper=$player_item_own_neck_copper
+player_item_own_torso_copper=$player_item_own_torso_copper
+player_item_own_arms_copper=$player_item_own_arms_copper
+player_item_own_gloves_copper=$player_item_own_gloves_copper
+player_item_own_leggings_copper=$player_item_own_leggings_copper
+ #Bronze
+player_item_own_head_bronze=$player_item_own_head_bronze
+player_item_own_neck_bronze=$player_item_own_neck_bronze
+player_item_own_torso_bronze=$player_item_own_torso_bronze
+player_item_own_arms_bronze=$player_item_own_arms_bronze
+player_item_own_gloves_bronze=$player_item_own_gloves_bronze
+player_item_own_leggings_bronze=$player_item_own_leggings_bronze
+ #Gold
+player_item_own_head_gold=$player_item_own_head_gold
+player_item_own_neck_gold=$player_item_own_neck_gold
+player_item_own_torso_gold=$player_item_own_torso_gold
+player_item_own_arms_gold=$player_item_own_arms_gold
+player_item_own_gloves_gold=$player_item_own_gloves_gold
+player_item_own_leggings_gold=$player_item_own_leggings_gold
+ #Agapite
+player_item_own_head_agapite=$player_item_own_head_agapite
+player_item_own_neck_agapite=$player_item_own_neck_agapite
+player_item_own_torso_agapite=$player_item_own_torso_agapite
+player_item_own_arms_agapite=$player_item_own_arms_agapite
+player_item_own_gloves_agapite=$player_item_own_gloves_agapite
+player_item_own_leggings_agapite=$player_item_own_leggings_agapite
+ #Verite
+player_item_own_head_verite=$player_item_own_head_verite
+player_item_own_neck_verite=$player_item_own_neck_verite
+player_item_own_torso_verite=$player_item_own_torso_verite
+player_item_own_arms_verite=$player_item_own_arms_verite
+player_item_own_gloves_verite=$player_item_own_gloves_verite
+player_item_own_leggings_verite=$player_item_own_leggings_verite
+ #Valorite
+player_item_own_head_valorite=$player_item_own_head_valorite
+player_item_own_neck_valorite=$player_item_own_neck_valorite
+player_item_own_torso_valorite=$player_item_own_torso_valorite
+player_item_own_arms_valorite=$player_item_own_arms_valorite
+player_item_own_gloves_valorite=$player_item_own_gloves_valorite
+player_item_own_leggings_valorite=$player_item_own_leggings_valorite
+
+" > profiles/"${player_name}"/items
+
+
+ echo -en "charlookupname=$player_name
+charlookupint=$player_intelligence
+charlookupstr=$player_strength
+charlookupdex=$player_dexterity
+charlookupwep='$player_item_weapon'
+charlookuphp=$player_hp
+charlookuphardhp=$player_hp_cap
+charlookupplayer_hp_modifier=$player_hp_modifier
+charlookupdeath=$player_deaths
+lookup_player_killcount=$player_killcount
+charlookupclass=$player_class
+charlookuphit=$player_attack
+charlookuphitmod=$player_attack_modifier
+charlookupdef=$player_defense
+charlookupdefmod=$player_defense_modifier
+charlookupstamstat=$player_stamina_cap
+charlookupstam=$player_stamina
+
+" > profiles/"${player_name}"/lookup
+
+ echo -e " [\033[1;36m+\033[m]  Character saving complete."
+}
