@@ -2,6 +2,7 @@
 #-----------------------------#
 # Configuration file for Mage #
 #-----------------------------#
+
 player_distance=$(($RANDOM%3 + 2))
 
 #-----------------------#
@@ -28,21 +29,32 @@ function class.basicstats {
 
  player_item_arrow=0
  player_item_reagent=50
+
  player_item_weapon=spellbook
  player_item_weapon_name="Spell Book"
  player_item_own_spellbook=1
- player_item_armor=leather
- player_item_armor_name="Leather"
- player_item_own_leather=1
-
  source items/weapons/${player_item_weapon}.sh
- source items/armor/${player_item_armor}.sh
  $item_weapon_set
+
+ player_item_armor_head=head_leather
+ player_item_armor_neck=neck_leather
+ player_item_armor_arms=arms_leather
+ player_item_armor_torso=torso_leather
+ player_item_armor_gloves=gloves_leather
+ player_item_armor_leggings=leggings_leather
+ player_item_own_head_leather=1
+ player_item_own_neck_leather=1
+ player_item_own_arms_leather=1
+ player_item_own_torso_leather=1
+ player_item_own_gloves_leather=1
+ player_item_own_leggings_leather=1
+ source misc/armorset.sh
  $item_armor_set
- player_item_armor_durability_cap=$item_armor_durability
- player_item_armor_durability=$item_armor_durability_cap
- player_item_weapon_durability_cap=$item_weapon_durability
- player_item_weapon_durability=$item_weapon_durability_cap
+ 
+# player_item_armor_durability_cap=$item_armor_durability
+# player_item_armor_durability=$item_armor_durability_cap
+# player_item_weapon_durability_cap=$item_weapon_durability
+# player_item_weapon_durability=$item_weapon_durability_cap
 
  player_skill_archery=0
  player_skill_magery=40
@@ -63,7 +75,6 @@ function class.basicstats {
 #----------------------------------#
 function player.statmod {
 
- source items/armor/${player_item_armor}.sh
  source items/weapons/${player_item_weapon}.sh
  source items/enhancement/${player_item_enhancement}.sh
 
