@@ -18,6 +18,7 @@ player_item_weapon_repair=0
 player_item_weapon_upgrade=0
 
 sourced_combat=0
+sourced_misc=0
 
 defaultautospeed=3
 autospeed=$defaultautospeed

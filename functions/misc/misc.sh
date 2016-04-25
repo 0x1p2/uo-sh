@@ -1,16 +1,19 @@
 #!/bin/bash
 
-source misc/source.sh
-source misc/authenticate.sh
-source misc/createplayer.sh
-source misc/paperdoll.sh
-source misc/optionsmenu.sh
-source misc/save.sh
-source misc/setzero.sh
-source misc/armorset.sh
-source misc/readme/home.sh
-source locations/britannia/towncenter.sh
-source combat/combatstage.sh
+if [[ ${sourced_misc} != 1 ]]; then
+	source misc/source.sh
+	source misc/authenticate.sh
+	source misc/createplayer.sh
+	source misc/paperdoll.sh
+	source misc/optionsmenu.sh
+	source misc/save.sh
+	source misc/setzero.sh
+	source misc/armorset.sh
+	source misc/readme/home.sh
+	source locations/britannia/towncenter.sh
+	source combat/combatstage.sh
+	sourced_misc=1
+fi
 
 
 function randomgen {
@@ -60,7 +63,7 @@ function game.credits {
  clear
  echo " "
  echo -e " Created by:
-  Sciyo.
+  Schism || 0x1p2.
 
 Special Thanks to:
 Michael Nolan

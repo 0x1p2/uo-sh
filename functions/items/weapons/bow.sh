@@ -24,3 +24,4 @@ function bow.weapon {
  item_weapon_poison=2
 
 }
+

@@ -54,7 +54,7 @@ function class.basicstats {
 # player_item_armor_durability_cap=$item_armor_durability
 # player_item_armor_durability=$item_armor_durability_cap
 # player_item_weapon_durability_cap=$item_weapon_durability
-# player_item_weapon_durability=$item_weapon_durability_cap
+ player_item_weapon_durability=$item_weapon_durability_cap
 
  player_skill_archery=40
  player_skill_magery=0
