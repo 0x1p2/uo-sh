@@ -69,7 +69,7 @@ function attack {
   echo -e " [\033[1;36m+\033[m]  $npc_name appears to be dead."
 
   pause
-  npc.alive.status
+  npc_alive_status
 
  else
 

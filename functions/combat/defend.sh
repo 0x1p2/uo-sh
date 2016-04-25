@@ -7,7 +7,7 @@ function defend {
  miscskillgain
  player.special.defense.status
  player.special.aura.status
- player.equipment.defend.status
+ player_equipment_defend_status
 
  player.statmod
  npc.statmod

@@ -3,20 +3,24 @@
 
 function combatstage {
 
- source misc/stat.sh
- source skills/wepskill.sh
- source skills/supskill.sh
- source skills/miscskill.sh
- source skills/anatomy.sh
- source classes/$player_source
- source spawns/monsters/$npc_source
- source combat/status.sh
- source combat/attack.sh
- source combat/defend.sh
- source combat/equipment.sh
- source combat/playerspecialattack.sh
- source combat/playerspecialdefense.sh
- source combat/npcspecialattack.sh
+ if [[ ${sourced_combat} -lt 1 ]]; then
+ 	source misc/stat.sh
+ 	source skills/wepskill.sh
+ 	source skills/supskill.sh
+ 	source skills/miscskill.sh
+ 	source skills/anatomy.sh
+ 	source classes/$player_source
+ 	source spawns/monsters/$npc_source
+	source combat/equipment.sh
+ 	source combat/c_status.sh
+ 	source combat/attack.sh
+ 	source combat/defend.sh
+ 	#source combat/equipment.sh
+ 	source combat/playerspecialattack.sh
+ 	source combat/playerspecialdefense.sh
+ 	source combat/npcspecialattack.sh
+	sourced_combat=1
+ fi
 
  player.statmod
  npc.statmod
@@ -52,7 +56,7 @@ function combatstage {
  echo " "
  sleep 1
  read -sn 1 -t 2 -p "  Continuing in 2 seconds..." voidvar
- npc.alive.status
+ npc_alive_status
  echo -e " [\033[1;36m+\033[m]  You now have a total of \033[33m$player_item_gold\033[m gold."
  pause
 }

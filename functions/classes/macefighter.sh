@@ -148,19 +148,19 @@ function player.postround {
    case $menusel in
     "Continue")
      clear
-     npc.alive.status ;;
+     npc_alive_status ;;
     "$player_special_name1($player_special_stamina1)")
      player_special1
      player_special_flag=1
-     npc.alive.status ;;
+     npc_alive_status ;;
     "$player_special_name2($player_special_stamina2)")
      player_special2
      player_special_flag=1
-     npc.alive.status ;;
+     npc_alive_status ;;
     "$player_special_name3($player_special_stamina3)")
      player_special3
      player_special_flag=1
-     npc.alive.status ;;
+     npc_alive_status ;;
     "Use Bandaid($player_item_bandaid)")
      bandaid
      clear
@@ -173,12 +173,12 @@ function player.postround {
      echo " "
      clear ;;
     *)
-     npc.alive.status ;;
+     npc_alive_status ;;
    esac
    break
   done
  else
-  npc.alive.status
+  npc_alive_status
  fi
 }
 

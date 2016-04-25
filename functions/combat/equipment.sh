@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function player.equipment.status {
+function player_equipment_status {
   if [[ $player_class == "Mage" || $player_class == "Archer" ]]; then
    player_item_armor_durability=$[ $player_item_armor_durability - 1 ]
   else
@@ -11,7 +11,7 @@ function player.equipment.status {
    player_item_weapon_durability=0
    player_item_weapon_durability_cap=$[ $player_item_weapon_durability_cap - 1 ]
    wepdurstatus=`echo "weapon maximum durability decreased by 1"`
-   if $player_item_weapon_durability_cap=$[ $player_item_weapon_durability_cap -le 0 ]]; then
+   if [[ $player_item_weapon_durability_cap -le 0 ]]; then
     player_item_weapon_durability_cap=0
    fi
   else
@@ -30,7 +30,7 @@ function player.equipment.status {
   fi
 }
 
-function player.equipment.defend.status {
+function player_equipment_defend_status {
  if [[ $player_item_armor_durability_cap = 0 ]]; then
   player_defense_total=$[ $player_defense_total / 2 ]
   echo -e "  [\033[1;33m-\033[m]  \033[1;33mYour armor has broken. Fix it at the provisioners.\033[m"

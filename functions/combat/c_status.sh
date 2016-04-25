@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-function npc.alive.status {
+function npc_alive_status {
 
  player.statmod
  npc.statmod
@@ -40,7 +40,7 @@ function npc.alive.status {
   player_special_aura_flag=0
   completed=1
   
-  player.equipment.status
+  player_equipment_status
 
   echo -e " "
   echo -e " [\033[1;36m+\033[m]  $npc_name is dead! "
